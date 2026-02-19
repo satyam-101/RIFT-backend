@@ -1,0 +1,135 @@
+{
+  "CODEINE": {
+    "gene": "CYP2D6",
+    "PM": {
+      "risk_label": "Ineffective",
+      "severity": "high",
+      "recommendation_text": "Avoid codeine in CYP2D6 poor metabolizers. Consider morphine or non-opioid alternatives."
+    },
+    "IM": {
+      "risk_label": "Adjust Dosage",
+      "severity": "moderate",
+      "recommendation_text": "Reduced conversion to morphine. Monitor efficacy. Consider alternative analgesic if inadequate response."
+    },
+    "NM": {
+      "risk_label": "Safe",
+      "severity": "none",
+      "recommendation_text": "Standard dosing recommended."
+    },
+    "RM": {
+      "risk_label": "Adjust Dosage",
+      "severity": "moderate",
+      "recommendation_text": "Increased morphine formation possible. Monitor for toxicity."
+    },
+    "URM": {
+      "risk_label": "Toxic",
+      "severity": "critical",
+      "recommendation_text": "Avoid codeine due to risk of morphine toxicity."
+    }
+  },
+
+  "WARFARIN": {
+    "gene": "CYP2C9",
+    "PM": {
+      "risk_label": "Adjust Dosage",
+      "severity": "high",
+      "recommendation_text": "Reduced metabolism of warfarin. Initiate lower dose and monitor INR closely."
+    },
+    "IM": {
+      "risk_label": "Adjust Dosage",
+      "severity": "moderate",
+      "recommendation_text": "Consider lower initial dose. Monitor INR carefully."
+    },
+    "NM": {
+      "risk_label": "Safe",
+      "severity": "none",
+      "recommendation_text": "Standard dosing with routine INR monitoring."
+    }
+  },
+
+  "clopidogrel": {
+    "gene": "CYP2C19",
+    "PM": {
+      "risk_label": "Ineffective",
+      "severity": "high",
+      "recommendation_text": "Avoid clopidogrel in CYP2C19 poor metabolizers. Consider prasugrel or ticagrelor."
+    },
+    "IM": {
+      "risk_label": "Adjust Dosage",
+      "severity": "moderate",
+      "recommendation_text": "Reduced activation of clopidogrel. Consider alternative antiplatelet therapy."
+    },
+    "NM": {
+      "risk_label": "Safe",
+      "severity": "none",
+      "recommendation_text": "Standard dosing recommended."
+    },
+    "RM": {
+      "risk_label": "Safe",
+      "severity": "low",
+      "recommendation_text": "Standard dosing recommended."
+    },
+    "URM": {
+      "risk_label": "Safe",
+      "severity": "low",
+      "recommendation_text": "Standard dosing recommended."
+    }
+  },
+
+  "SIMVASTATIN": {
+    "gene": "SLCO1B1",
+    "PM": {
+      "risk_label": "Toxic",
+      "severity": "high",
+      "recommendation_text": "High risk of simvastatin-induced myopathy. Consider lower dose or alternative statin."
+    },
+    "IM": {
+      "risk_label": "Adjust Dosage",
+      "severity": "moderate",
+      "recommendation_text": "Increased risk of myopathy. Use lower dose and monitor."
+    },
+    "NM": {
+      "risk_label": "Safe",
+      "severity": "none",
+      "recommendation_text": "Standard dosing recommended."
+    }
+  },
+
+  "AZATHIOPRINE": {
+    "gene": "TPMT",
+    "PM": {
+      "risk_label": "Toxic",
+      "severity": "critical",
+      "recommendation_text": "Avoid azathioprine due to risk of severe myelosuppression."
+    },
+    "IM": {
+      "risk_label": "Adjust Dosage",
+      "severity": "high",
+      "recommendation_text": "Start with reduced dose and monitor blood counts closely."
+    },
+    "NM": {
+      "risk_label": "Safe",
+      "severity": "none",
+      "recommendation_text": "Standard dosing recommended."
+    }
+  },
+
+  "FLUOROURACIL": {
+    "gene": "DPYD",
+    "PM": {
+      "risk_label": "Toxic",
+      "severity": "critical",
+      "recommendation_text": "Avoid fluorouracil due to high risk of severe toxicity."
+    },
+    "IM": {
+      "risk_label": "Adjust Dosage",
+      "severity": "high",
+      "recommendation_text": "Reduce starting dose and monitor closely for toxicity."
+    },
+    "NM": {
+      "risk_label": "Safe",
+      "severity": "none",
+      "recommendation_text": "Standard dosing recommended."
+    }
+  }
+}
