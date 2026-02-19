@@ -24,13 +24,13 @@ Return response in EXACT JSON format:
 {
   "summary": "...",
   "mechanism": "...",
-  "clinical_impact": "..."
+  "citations": ["..."]
 }
 
 Requirements:
-- Explain gene-drug metabolic pathway
-- Reference variant impact
-- Mention phenotype consequences
+- summary: Concise explanation of pharmacogenomic risk for this drug-gene pair
+- mechanism: Explain the gene-drug metabolic pathway and how the variant affects drug response
+- citations: Array of 1-3 relevant CPIC guideline references or published literature citations
 - Be clinically precise
 - If uncertain, clearly state uncertainty`;
 
@@ -54,27 +54,29 @@ Requirements:
     let parsed;
     try {
       parsed = JSON.parse(content);
-    } catch (parseErr) {
+    } catch {
       parsed = {
         summary: content,
         mechanism: "Mechanism extraction unavailable.",
-        clinical_impact: "Clinical impact explanation generated but not structured."
+        citations: []
       };
     }
 
+    const citations = Array.isArray(parsed.citations) ? parsed.citations : [];
+
     return {
-      summary: parsed.summary,
-      mechanism: parsed.mechanism,
-      clinical_impact: parsed.clinical_impact,
+      summary: parsed.summary || "Pharmacogenomic interaction detected.",
+      mechanism: parsed.mechanism || "Metabolic pathway affected based on phenotype.",
+      citations,
       success: true
     };
   } catch (error) {
     console.error("Groq LLM Error:", error.message);
 
     return {
-      summary: "LLM unavailable. Pharmacogenomic interaction detected.",
-      mechanism: "Metabolic pathway affected based on phenotype.",
-      clinical_impact: "Clinical dosing adjustments may be required.",
+      summary: "LLM unavailable. Pharmacogenomic interaction detected based on genetic profile.",
+      mechanism: "Metabolic pathway affected based on detected phenotype.",
+      citations: ["CPIC Guidelines — https://cpicpgx.org/guidelines/"],
       success: false
     };
   }

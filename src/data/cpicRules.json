@@ -4,27 +4,38 @@
     "PM": {
       "risk_label": "Ineffective",
       "severity": "high",
-      "recommendation_text": "Avoid codeine in CYP2D6 poor metabolizers. Consider morphine or non-opioid alternatives."
+      "dose_adjustment": "Avoid codeine. Use morphine or non-opioid alternatives.",
+      "note": "CYP2D6 poor metabolizers cannot convert codeine to its active metabolite morphine. CPIC recommends avoiding codeine in PMs."
     },
     "IM": {
       "risk_label": "Adjust Dosage",
       "severity": "moderate",
-      "recommendation_text": "Reduced conversion to morphine. Monitor efficacy. Consider alternative analgesic if inadequate response."
+      "dose_adjustment": "Reduced conversion to morphine expected. Monitor efficacy and consider alternative analgesic if inadequate response.",
+      "note": "CYP2D6 intermediate metabolizers have reduced capacity to activate codeine. CPIC suggests using an alternative or monitoring closely."
     },
     "NM": {
       "risk_label": "Safe",
       "severity": "none",
-      "recommendation_text": "Standard dosing recommended."
+      "dose_adjustment": "Standard dosing recommended.",
+      "note": "Normal CYP2D6 metabolism. No dosing adjustment required per CPIC guidelines."
     },
     "RM": {
       "risk_label": "Adjust Dosage",
       "severity": "moderate",
-      "recommendation_text": "Increased morphine formation possible. Monitor for toxicity."
+      "dose_adjustment": "Increased morphine formation possible. Monitor for signs of opioid toxicity.",
+      "note": "CYP2D6 rapid metabolizers may produce higher morphine levels. CPIC recommends caution."
     },
     "URM": {
       "risk_label": "Toxic",
       "severity": "critical",
-      "recommendation_text": "Avoid codeine due to risk of morphine toxicity."
+      "dose_adjustment": "Avoid codeine due to risk of life-threatening morphine toxicity.",
+      "note": "CYP2D6 ultrarapid metabolizers convert codeine to morphine at dangerously high rates. CPIC strongly recommends avoiding codeine."
+    },
+    "Unknown": {
+      "risk_label": "Unknown",
+      "severity": "low",
+      "dose_adjustment": "Insufficient genetic data. Use standard dosing with clinical monitoring.",
+      "note": "Unable to determine CYP2D6 phenotype. Exercise caution."
     }
   },
 
@@ -33,46 +44,66 @@
     "PM": {
       "risk_label": "Adjust Dosage",
       "severity": "high",
-      "recommendation_text": "Reduced metabolism of warfarin. Initiate lower dose and monitor INR closely."
+      "dose_adjustment": "Reduce initial warfarin dose significantly. Monitor INR closely and titrate slowly.",
+      "note": "CYP2C9 poor metabolizers have markedly reduced warfarin clearance, increasing bleeding risk. CPIC recommends a substantially lower starting dose."
     },
     "IM": {
       "risk_label": "Adjust Dosage",
       "severity": "moderate",
-      "recommendation_text": "Consider lower initial dose. Monitor INR carefully."
+      "dose_adjustment": "Consider lower initial dose. Monitor INR carefully.",
+      "note": "CYP2C9 intermediate metabolizers have reduced warfarin metabolism. CPIC recommends a moderately reduced dose."
     },
     "NM": {
       "risk_label": "Safe",
       "severity": "none",
-      "recommendation_text": "Standard dosing with routine INR monitoring."
+      "dose_adjustment": "Standard dosing with routine INR monitoring.",
+      "note": "Normal CYP2C9 metabolism. Standard warfarin dosing per CPIC guidelines."
+    },
+    "Unknown": {
+      "risk_label": "Unknown",
+      "severity": "low",
+      "dose_adjustment": "Insufficient genetic data. Use standard dosing with careful INR monitoring.",
+      "note": "Unable to determine CYP2C9 phenotype. Monitor closely."
     }
   },
 
-  "clopidogrel": {
+  "CLOPIDOGREL": {
     "gene": "CYP2C19",
     "PM": {
       "risk_label": "Ineffective",
       "severity": "high",
-      "recommendation_text": "Avoid clopidogrel in CYP2C19 poor metabolizers. Consider prasugrel or ticagrelor."
+      "dose_adjustment": "Avoid clopidogrel. Use prasugrel or ticagrelor as alternative antiplatelet therapy.",
+      "note": "CYP2C19 poor metabolizers cannot adequately activate clopidogrel. CPIC recommends alternative antiplatelet agents."
     },
     "IM": {
       "risk_label": "Adjust Dosage",
       "severity": "moderate",
-      "recommendation_text": "Reduced activation of clopidogrel. Consider alternative antiplatelet therapy."
+      "dose_adjustment": "Reduced activation of clopidogrel expected. Consider alternative antiplatelet therapy.",
+      "note": "CYP2C19 intermediate metabolizers have reduced clopidogrel activation. CPIC suggests considering alternatives."
     },
     "NM": {
       "risk_label": "Safe",
       "severity": "none",
-      "recommendation_text": "Standard dosing recommended."
+      "dose_adjustment": "Standard dosing recommended.",
+      "note": "Normal CYP2C19 metabolism. Standard clopidogrel dosing per CPIC guidelines."
     },
     "RM": {
       "risk_label": "Safe",
-      "severity": "low",
-      "recommendation_text": "Standard dosing recommended."
+      "severity": "none",
+      "dose_adjustment": "Standard dosing recommended.",
+      "note": "CYP2C19 rapid metabolizers have adequate clopidogrel activation."
     },
     "URM": {
       "risk_label": "Safe",
+      "severity": "none",
+      "dose_adjustment": "Standard dosing recommended.",
+      "note": "CYP2C19 ultrarapid metabolizers have adequate clopidogrel activation."
+    },
+    "Unknown": {
+      "risk_label": "Unknown",
       "severity": "low",
-      "recommendation_text": "Standard dosing recommended."
+      "dose_adjustment": "Insufficient genetic data. Use standard dosing with clinical monitoring.",
+      "note": "Unable to determine CYP2C19 phenotype. Monitor antiplatelet response."
     }
   },
 
@@ -81,17 +112,26 @@
     "PM": {
       "risk_label": "Toxic",
       "severity": "high",
-      "recommendation_text": "High risk of simvastatin-induced myopathy. Consider lower dose or alternative statin."
+      "dose_adjustment": "Avoid simvastatin or prescribe a lower dose (max 20 mg). Consider alternative statin (e.g., rosuvastatin, pravastatin).",
+      "note": "SLCO1B1 poor function increases systemic simvastatin exposure, raising myopathy risk. CPIC recommends avoidance or dose limitation."
     },
     "IM": {
       "risk_label": "Adjust Dosage",
       "severity": "moderate",
-      "recommendation_text": "Increased risk of myopathy. Use lower dose and monitor."
+      "dose_adjustment": "Use lower dose of simvastatin and monitor for muscle symptoms.",
+      "note": "SLCO1B1 intermediate function moderately increases simvastatin exposure. CPIC recommends dose reduction."
     },
     "NM": {
       "risk_label": "Safe",
       "severity": "none",
-      "recommendation_text": "Standard dosing recommended."
+      "dose_adjustment": "Standard dosing recommended.",
+      "note": "Normal SLCO1B1 function. Standard simvastatin dosing per CPIC guidelines."
+    },
+    "Unknown": {
+      "risk_label": "Unknown",
+      "severity": "low",
+      "dose_adjustment": "Insufficient genetic data. Use standard dosing with monitoring for muscle symptoms.",
+      "note": "Unable to determine SLCO1B1 phenotype. Monitor for myopathy."
     }
   },
 
@@ -100,17 +140,26 @@
     "PM": {
       "risk_label": "Toxic",
       "severity": "critical",
-      "recommendation_text": "Avoid azathioprine due to risk of severe myelosuppression."
+      "dose_adjustment": "Avoid azathioprine or reduce dose to 10% of standard. Monitor blood counts weekly.",
+      "note": "TPMT poor metabolizers accumulate cytotoxic thioguanine nucleotides, causing severe myelosuppression. CPIC recommends drastic dose reduction or avoidance."
     },
     "IM": {
       "risk_label": "Adjust Dosage",
       "severity": "high",
-      "recommendation_text": "Start with reduced dose and monitor blood counts closely."
+      "dose_adjustment": "Start with 30-70% of standard dose. Monitor blood counts closely.",
+      "note": "TPMT intermediate metabolizers have reduced thiopurine metabolism. CPIC recommends starting at a reduced dose."
     },
     "NM": {
       "risk_label": "Safe",
       "severity": "none",
-      "recommendation_text": "Standard dosing recommended."
+      "dose_adjustment": "Standard dosing recommended.",
+      "note": "Normal TPMT activity. Standard azathioprine dosing per CPIC guidelines."
+    },
+    "Unknown": {
+      "risk_label": "Unknown",
+      "severity": "low",
+      "dose_adjustment": "Insufficient genetic data. Use standard dosing with blood count monitoring.",
+      "note": "Unable to determine TPMT phenotype. Monitor for myelosuppression."
     }
   },
 
@@ -119,17 +168,26 @@
     "PM": {
       "risk_label": "Toxic",
       "severity": "critical",
-      "recommendation_text": "Avoid fluorouracil due to high risk of severe toxicity."
+      "dose_adjustment": "Avoid fluorouracil entirely due to high risk of fatal toxicity.",
+      "note": "DPYD poor metabolizers cannot adequately clear fluoropyrimidines, leading to life-threatening toxicity. CPIC strongly recommends avoidance."
     },
     "IM": {
       "risk_label": "Adjust Dosage",
       "severity": "high",
-      "recommendation_text": "Reduce starting dose and monitor closely for toxicity."
+      "dose_adjustment": "Reduce starting dose by at least 50%. Monitor closely for toxicity.",
+      "note": "DPYD intermediate metabolizers have reduced fluoropyrimidine clearance. CPIC recommends significant dose reduction."
     },
     "NM": {
       "risk_label": "Safe",
       "severity": "none",
-      "recommendation_text": "Standard dosing recommended."
+      "dose_adjustment": "Standard dosing recommended.",
+      "note": "Normal DPYD activity. Standard fluorouracil dosing per CPIC guidelines."
+    },
+    "Unknown": {
+      "risk_label": "Unknown",
+      "severity": "low",
+      "dose_adjustment": "Insufficient genetic data. Use standard dosing with close toxicity monitoring.",
+      "note": "Unable to determine DPYD phenotype. Monitor for fluoropyrimidine toxicity."
     }
   }
 }

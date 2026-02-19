@@ -17,23 +17,22 @@ module.exports = z.object({
       z.object({
         rsid: z.string(),
         gene: z.string(),
-        star: z.string()
+        allele: z.string(),
+        effect: z.string()
       })
     )
   }),
   clinical_recommendation: z.object({
-    guideline_source: z.string(),
-    recommendation_text: z.string()
+    dose_adjustment: z.string(),
+    note: z.string()
   }),
   llm_generated_explanation: z.object({
     summary: z.string(),
     mechanism: z.string(),
-    clinical_impact: z.string(),
-    success: z.boolean()
+    citations: z.array(z.string())
   }),
   quality_metrics: z.object({
     vcf_parsing_success: z.boolean(),
-    genes_detected: z.number(),
-    llm_success: z.boolean()
+    missing_annotations: z.array(z.string())
   })
 });

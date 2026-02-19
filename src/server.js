@@ -5,6 +5,7 @@ const cors = require("cors");
 const morgan = require("morgan");
 
 const analyzeRoute = require("./routes/analyze");
+const chatRoute = require("./routes/chat");
 
 const app = express();
 
@@ -14,6 +15,7 @@ app.use(morgan("combined"));
 app.use(express.json());
 
 app.use("/api/analyze", analyzeRoute);
+app.use("/api/chat", chatRoute);
 
 app.use((err, req, res, next) => {
   console.error(err);
