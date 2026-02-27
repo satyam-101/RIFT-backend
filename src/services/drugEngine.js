@@ -54,10 +54,11 @@ module.exports = function drugEngine(drug, geneProfile) {
   }
 
   return {
-    matched: true,
-    risk_label: rule.risk_label,
-    severity: rule.severity,
-    dose_adjustment: rule.dose_adjustment,
-    note: rule.note
-  };
+  matched: true,
+  risk_label: rule.risk_label,
+  severity: rule.severity,
+  dose_adjustment: rule.dose_adjustment,
+  note: rule.note,
+  alternative_drugs: rule.alternative_drugs || []
+};
 };

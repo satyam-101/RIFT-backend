@@ -5,6 +5,7 @@
       "risk_label": "Ineffective",
       "severity": "high",
       "dose_adjustment": "Avoid codeine. Use morphine or non-opioid alternatives.",
+      "alternative_drugs": ["Morphine", "Hydromorphone", "Fentanyl", "Non-opioid analgesics"],
       "note": "CYP2D6 poor metabolizers cannot convert codeine to its active metabolite morphine. CPIC recommends avoiding codeine in PMs."
     },
     "IM": {
@@ -29,6 +30,7 @@
       "risk_label": "Toxic",
       "severity": "critical",
       "dose_adjustment": "Avoid codeine due to risk of life-threatening morphine toxicity.",
+      "alternative_drugs": ["Morphine (carefully titrated)", "Non-opioid analgesics"],
       "note": "CYP2D6 ultrarapid metabolizers convert codeine to morphine at dangerously high rates. CPIC strongly recommends avoiding codeine."
     },
     "Unknown": {
@@ -73,12 +75,14 @@
       "risk_label": "Ineffective",
       "severity": "high",
       "dose_adjustment": "Avoid clopidogrel. Use prasugrel or ticagrelor as alternative antiplatelet therapy.",
+      "alternative_drugs": ["Prasugrel", "Ticagrelor"],
       "note": "CYP2C19 poor metabolizers cannot adequately activate clopidogrel. CPIC recommends alternative antiplatelet agents."
     },
     "IM": {
       "risk_label": "Adjust Dosage",
       "severity": "moderate",
       "dose_adjustment": "Reduced activation of clopidogrel expected. Consider alternative antiplatelet therapy.",
+      "alternative_drugs": ["Prasugrel", "Ticagrelor"],
       "note": "CYP2C19 intermediate metabolizers have reduced clopidogrel activation. CPIC suggests considering alternatives."
     },
     "NM": {
@@ -113,6 +117,7 @@
       "risk_label": "Toxic",
       "severity": "high",
       "dose_adjustment": "Avoid simvastatin or prescribe a lower dose (max 20 mg). Consider alternative statin (e.g., rosuvastatin, pravastatin).",
+      "alternative_drugs": ["Rosuvastatin", "Pravastatin"],
       "note": "SLCO1B1 poor function increases systemic simvastatin exposure, raising myopathy risk. CPIC recommends avoidance or dose limitation."
     },
     "IM": {
@@ -141,6 +146,7 @@
       "risk_label": "Toxic",
       "severity": "critical",
       "dose_adjustment": "Avoid azathioprine or reduce dose to 10% of standard. Monitor blood counts weekly.",
+      "alternative_drugs": ["Mycophenolate mofetil"],
       "note": "TPMT poor metabolizers accumulate cytotoxic thioguanine nucleotides, causing severe myelosuppression. CPIC recommends drastic dose reduction or avoidance."
     },
     "IM": {
@@ -169,6 +175,7 @@
       "risk_label": "Toxic",
       "severity": "critical",
       "dose_adjustment": "Avoid fluorouracil entirely due to high risk of fatal toxicity.",
+      "alternative_drugs": ["Raltitrexed (where appropriate)"],
       "note": "DPYD poor metabolizers cannot adequately clear fluoropyrimidines, leading to life-threatening toxicity. CPIC strongly recommends avoidance."
     },
     "IM": {
